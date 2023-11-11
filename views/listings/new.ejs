@@ -1,0 +1,71 @@
+<% layout("/layouts/boilerplate") %>
+
+    <body>
+        <div class="row">
+            <div class="col-8 offset-2">
+                <h2 class="mt-3">Create new listing</h2>
+                <form action="/listing" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" name="listing[title]" placeholder="Enter a catchy title" required
+                            class="form-control">
+                        <div class="valid-feedback">Title looks good</div>
+                        <div class="invalid-feedback">Title should be valid</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea type="text" name="listing[description]" placeholder="Write some description" required
+                            class="form-control"></textarea>
+                        <div class="invalid-feedback">Descripation should be valid</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Upload Listing Image</label>
+                        <input type="file" name="listing[image]" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <p>Choose any category for you listing</p> 
+                         <div class="input-group mb-3">
+                             <label class="input-group-text" for="inputGroupSelect01">Category</label>
+                             <select class="form-select" id="inputGroupSelect01" name="listing[category]" class="form-control">
+                                 <option value="rooms">Rooms</option>
+                                 <option value="iconicCities">Iconic Cities</option>
+                                 <option value="mountains">Mountains</option>
+                                 <option value="castles">Castles</option>
+                                 <option value="amazingPools">Amazing Pools</option>
+                                 <option value="camping">Camping</option>
+                                 <option value="farms">Farms</option>
+                                 <option value="arctic">Arctic</option>
+                                 <option value="domes">Domes</option>
+                                 <option value="boats">Boats</option>
+                             </select>
+                         </div>
+                     </div>
+
+                    <div class="row">
+                        <div class="mb-3 col-md-4">
+                            <label for="price" class="form-label">Price</label>
+                            <input name="listing[price]" placeholder="1200" required class="form-control">
+                            <div class="invalid-feedback">Price should be valid</div>
+                        </div>
+                        <div class="mb-3 col-md-8">
+                            <label for="country" class="form-label">Country</label>
+                            <input type="text" name="listing[country]" placeholder="India" required
+                                class="form-control">
+                            <div class="invalid-feedback">Country should be valid</div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="location" class="form-label">Location</label>
+                        <input type="text" name="listing[location]" placeholder="Gorakhpur,Uttar Pradesh" required
+                            class="form-control">
+                        <div class="invalid-feedback">Location should be valid</div>
+                    </div>
+                    <button class="btn btn-dark add-btn mt-3">Add</button>
+                </form>
+            </div>
+        </div>
+
+    </body>
