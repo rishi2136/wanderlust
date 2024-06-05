@@ -51,7 +51,13 @@
         <% } %>
 
             <div class="card col-6 offset-3 listing-card">
-
+<!-- ////////////////////////////payment -->
+                <div >
+                    <form action="/listing/payment" class="float-end">
+                        <button class="btn btn-success">Reserve</button>
+                    </form>
+                </div>
+<!-- ////////////////////////// -->
                 <% if(currUser) {%>
                     <hr>
                     <h4>Leave a Review</h4>

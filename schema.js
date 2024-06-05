@@ -1,5 +1,5 @@
 const Joi = require('joi');
-
+//modules created to manage the server side validation such as req through postman or hoppscotch
 module.exports.listingSchema = Joi.object({
     listing : Joi.object({
         title: Joi.string().required(),

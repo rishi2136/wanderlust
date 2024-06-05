@@ -1,3 +1,4 @@
+//customer middleware class to through erroe
 class ExpressError extends Error {
     constructor(statusCode, message) {
         super();

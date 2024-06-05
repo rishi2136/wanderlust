@@ -1,6 +1,6 @@
 {
-  "engines" : {
-    "node" : "18.17.1"
+  "engines": {
+    "node": "18.17.1"
   },
   "name": "major-project",
   "version": "1.0.0",
@@ -33,6 +33,7 @@
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^8.0.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "stripe": "^14.15.0"
   }
 }

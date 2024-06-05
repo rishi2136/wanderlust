@@ -1,5 +1,5 @@
 
-mapboxgl.accessToken = mapToken;
+mapboxgl.accessToken = mapToken;  //initialize in show.ejs
 
 const map = new mapboxgl.Map({
 container: 'map', // container ID

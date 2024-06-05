@@ -33,7 +33,7 @@ const listingSchema =new Schema( {
           required: true
         },
         coordinates: {
-          type: [Number],
+          type: [Number],  //array of longitude and latitude
           required: true
         }
       },
@@ -44,7 +44,8 @@ const listingSchema =new Schema( {
       }
     });
 
-    //deletion mongoose middleware to manage review deletion
+    //auto trigger whenever findByIdAndDelete Triggered
+    //deletion mongoose middleware to manage review deletion whenever related listing deleted
     listingSchema.post("findOneAndDelete", async(listing)=>{
       if(listing)
       await Review.deleteMany({_id: {$in :listing.reviews}})

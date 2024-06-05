@@ -16,6 +16,7 @@ async function main() {
 
 let initDB = async ()=> {
     await Listing.deleteMany({});
+    //add default owner and category for each listing
     initData.data = initData.data.map((obj)=>({...obj, owner: "653ce8f93339cbeb39b924c0", category: "rooms"}));
     await Listing.insertMany(initData.data);
     console.log("data was initialised");

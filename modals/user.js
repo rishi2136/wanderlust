@@ -9,6 +9,6 @@ const userSchema = new Schema({
     },
 });
 
-userSchema.plugin(passportLocalMongoose);
+userSchema.plugin(passportLocalMongoose);  //simplifies the building username and password login with passport
 
 module.exports = mongoose.model("User",userSchema);
